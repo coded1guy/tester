@@ -1,3 +1,5 @@
+import doi
+
 def extract_txt_metadata(txt, search_doi=True, search_fulltext=False, max_query_words=200, scholar=False):
     """extract metadata from text, by parsing and doi-query, or by fulltext query in google scholar
     """
@@ -40,3 +42,5 @@ def extract_txt_metadata(txt, search_doi=True, search_fulltext=False, max_query_
         raise ValueError('failed to extract metadata')
 
     return bibtex 
+
+extract_txt_metadata(input("enter your txt file: "))
